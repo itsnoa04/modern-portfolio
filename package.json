@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm format && git add -A *"
+      "pre-commit": "npm run format && git add -A *"
     }
   },
   "devDependencies": {
