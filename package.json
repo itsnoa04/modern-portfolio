@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": " prettier --check . && next lint",
     "format": "prettier --write .",
-    "test": "pnpm run test:jest && pnpm run test:cy",
+    "test": "npm run test:jest && npm run test:cy",
     "test:cy": "start-server-and-test dev http://localhost:3000 cy:run",
     "test:jest": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
