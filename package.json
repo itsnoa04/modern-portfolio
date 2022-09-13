@@ -27,7 +27,7 @@
     "sass": "^1.54.9"
   },
   "husky": {
-    "hooks": {
+    "hooks": { //TODO: fix husky hooks not running
       "pre-commit": "echo 'running precommit' && npm run test && npm build && npm run format && git add -A *"
     }
   },
