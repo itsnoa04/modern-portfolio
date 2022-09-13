@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && npm build && npm run format && git add -A *"
+      "pre-commit": "echo 'running precommit' && npm run test && npm build && npm run format && git add -A *"
     }
   },
   "devDependencies": {
