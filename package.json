@@ -21,6 +21,7 @@
     "cy:run": "cypress run"
   },
   "dependencies": {
+    "husky": "^8.0.1",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
