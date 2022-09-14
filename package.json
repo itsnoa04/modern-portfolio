@@ -12,13 +12,16 @@
     "start": "next start",
     "lint": " prettier --check . && next lint",
     "format": "prettier --write .",
-    "test": "npm run test:jest && npm run test:cy",
+    "test": "npm run test:jest && npm run test:cy && npm run build",
     "test:cy": "start-server-and-test dev http://localhost:3000 cy:run",
     "test:jest": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
     "test:coverage": "jest --coverage --env=jsdom",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "precommit": "npm run format && git add *",
+    "prepush": "npm run lint && npm run test",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.3.0",
@@ -26,12 +29,8 @@
     "react-dom": "18.2.0",
     "sass": "^1.54.9"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format && git add -A *"
-    }
-  },
   "devDependencies": {
+    "husky": "^8.0.1",
     "@testing-library/dom": "^8.17.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
