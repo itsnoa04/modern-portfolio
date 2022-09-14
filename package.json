@@ -28,7 +28,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'running precommit' && npm run test && npm build && npm run format && git add -A *"
+      "applypatch-msg": "echo \"Running applypatch-msg hook\"",
+      "pre-applypatch": "echo \"Running pre-applypatch hook\"",
+      "post-applypatch": "echo \"Running post-applypatch hook\"",
+      "pre-commit": "npm run lint",
+      "prepare-commit-msg": "echo \"Running prepare-commit-msg hook\"",
+      "commit-msg": "echo \"Running commit-msg hook\""
     }
   },
   "devDependencies": {
