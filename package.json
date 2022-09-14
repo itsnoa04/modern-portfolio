@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": " prettier --check . && next lint",
     "format": "prettier --write .",
-    "test": "npm run test:jest && npm run test:cy",
+    "test": "npm run test:jest && npm run test:cy && npm run build",
     "test:cy": "start-server-and-test dev http://localhost:3000 cy:run",
     "test:jest": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
@@ -20,6 +20,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "precommit": "npm run format && git add *",
+    "prepush": "npm run lint && npm run test",
     "prepare": "husky install"
   },
   "dependencies": {
