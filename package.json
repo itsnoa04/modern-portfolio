@@ -18,26 +18,18 @@
     "test:watch": "jest --watch --env=jsdom",
     "test:coverage": "jest --coverage --env=jsdom",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "precommit": "npm run format && git add *",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "husky": "^8.0.1",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.54.9"
   },
-  "husky": {
-    "hooks": {
-      "applypatch-msg": "echo \"Running applypatch-msg hook\"",
-      "pre-applypatch": "echo \"Running pre-applypatch hook\"",
-      "post-applypatch": "echo \"Running post-applypatch hook\"",
-      "pre-commit": "npm run lint",
-      "prepare-commit-msg": "echo \"Running prepare-commit-msg hook\"",
-      "commit-msg": "echo \"Running commit-msg hook\""
-    }
-  },
   "devDependencies": {
+    "husky": "^8.0.1",
     "@testing-library/dom": "^8.17.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
